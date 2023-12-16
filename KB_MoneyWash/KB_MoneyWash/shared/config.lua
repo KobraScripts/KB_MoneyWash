@@ -9,6 +9,10 @@ Config.Coords = {
 
 Config.Fee = 0.1 -- 10% fee
 
+Config.Input = 'black_money'
+
+Config.Output = 'money'
+
 Config.Language = 'en' -- You can choose between 'en' and 'de'.
 
 -- WeebHook --
