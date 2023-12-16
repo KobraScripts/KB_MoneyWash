@@ -22,9 +22,9 @@ AddEventHandler('KBMoneyWash:wash', function (amount)
     local xPlayer = ESX.GetPlayerFromId(source)
     local moneyback = amount - (amount * Config.Fee)
 
-    if xPlayer.getAccount('black_money').money >= amount then
-        xPlayer.removeAccountMoney('black_money', amount)
-        xPlayer.addAccountMoney('money', moneyback)
+    if xPlayer.getAccount(Config.Input).money >= amount then
+        xPlayer.removeAccountMoney(Config.Input, amount)
+        xPlayer.addAccountMoney(Config.Output, moneyback)
         xPlayer.showNotification(Translation[Language]['youHaveLaundered'] .. amount)
         MoneWashLogs(amount)
     else
